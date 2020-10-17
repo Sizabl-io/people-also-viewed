@@ -26,7 +26,6 @@
 
 ```json
     {
-    "id": "Integer",
     "name": "String",
     "rating": "Integer",
     "num_of_reviews": "Integer",
@@ -38,8 +37,10 @@
     }
 ```
 
-### CREATE - Add a review to a specific restaurant
-  * POST `/api/alsoViewed/reviews`
+### CREATE - Add a review
+  * POST `/api/alsoViewed/restaurants/:id/reviews`
+
+**Parameter:** restaurant_id
 
 **Success Status Code:** `201`
 
@@ -47,7 +48,6 @@
 
 ```json
     {
-    "id": "Integer",
     "avatar_url": "String",
     "name": "String",
     "date": "String",
@@ -82,10 +82,10 @@
 ```
 
 ### READ - Get all reviews of a specific restaurant
-  * GET `/api/alsoViewed/reviews/:restaurant_id`
+  * GET `/api/alsoViewed/restaurants/:id/reviews/`
 
 **Path Parameters:**
-  * `restaurant_id` | restaurant id
+  * `id` | restaurant id
 
 **Success Status Code:** `200`
 
