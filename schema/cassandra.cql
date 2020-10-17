@@ -39,5 +39,3 @@ CREATE TABLE images_to_restaurants (
   img_url text,
   PRIMARY KEY (restaurant_id, image_id)
 );
-
-
