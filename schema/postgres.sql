@@ -9,12 +9,12 @@ CREATE DATABASE viewed;
 \c viewed;
 
 CREATE TABLE IF NOT EXISTS cuisines (
-  id SERIAL PRIMARY KEY,
+  cuisine_id SERIAL PRIMARY KEY,
   name VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS restaurants (
-  id SERIAL PRIMARY KEY,
+  restaurant_id SERIAL PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   rating SMALLINT NOT NULL,
   number_of_reviews SMALLINT NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS restaurants (
 );
 
 CREATE TABLE IF NOT EXISTS reviews (
-  id SERIAL PRIMARY KEY,
+  review_id SERIAL PRIMARY KEY,
   avatar_url TEXT NOT NULL,
   name varchar(50) NOT NULL,
   date varchar(20) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS reviews (
 );
 
 CREATE TABLE IF NOT EXISTS images (
-  id SERIAL PRIMARY KEY,
+  image_id SERIAL PRIMARY KEY,
   img_url TEXT NOT NULL,
   restaurant_id INTEGER NOT NULL,
   FOREIGN KEY (restaurant_id) REFERENCES restaurants(id)
