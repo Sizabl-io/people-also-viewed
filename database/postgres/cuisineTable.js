@@ -8,7 +8,7 @@ const categoryList = ['Hot Dogs', 'Korean', 'Gastropubs', 'Chicken Wings', 'Pizz
 // Generate array of cuisine objects
 const cuisineDataGenerator = function () {
   const cuisines = [];
-  for (var i = 0; i < categoryList.length; i++) {
+  for (var i = 1; i < categoryList.length; i++) {
     cuisines.push(
       {
         cuisine_id: i,
