@@ -38,6 +38,16 @@ const getRestaurants = (callback) => {
     .catch(console.log)
 };
 
+const getRestaurants = (callback) => {
+  Restaurant.aggregate([
+    { $sample: { size: 10 } }
+  ])
+    .then((response) => {
+      callback(null, response);
+    })
+    .catch(console.log)
+};
+
 module.exports = {
   getRestaurants,
   Restaurant
