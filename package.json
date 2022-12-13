@@ -16,7 +16,7 @@
     "axios": "^0.20.0",
     "cassandra-driver": "^4.6.0",
     "csv-writer": "^1.6.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "faker": "^5.1.0",
     "fs": "0.0.1-security",
     "google-fonts-webpack-plugin": "^0.4.4",
